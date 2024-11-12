@@ -1,0 +1,335 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #FFFFFF;
+    background-color: #2c2f33;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+/* Стили для фиксированного хедера */
+header {
+    background-color: #23272a;
+    color: white;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Стили логотипа и навигации в хедере */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffdd57;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ffdd57;
+    color: #23272a;
+}
+
+/* Отступ для изображения под фиксированным хедером */
+.hero-image {
+    background-image: url("/static/images/boja.jpg"); /* Исправленный путь */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    margin-top: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Контейнер для глаз */
+.eyes-container {
+    display: flex;
+    gap: 40px;
+    position: absolute;
+    top: 34%; /* Центрирование по вертикали */
+    left: 51%; /* Центрирование по горизонтали */
+    transform: translate(-53%, -50%); /* Центрирование по обоим осям */
+}
+
+/* Стили глаз */
+.eye {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Стили зрачков */
+.pupil {
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.05s ease-out;
+}
+
+/* Стили для контента */
+.content-container {
+    padding: 25px;
+    background-color: #40444b;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    max-width: 800px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+h2, h3 {
+    color: #ffdd57;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #e2e2e2;
+}
+
+ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* Темная разделительная полоса */
+.divider {
+    width: 100%;
+    height: 4px;
+    background-color: #23272a;
+    margin: 20px 0;
+}
+
+/* Стили для окна "Особенности Мем Токена" */
+#features {
+    text-align: center;
+}
+
+#features h2 {
+    font-size: 24px;
+    color: #ffdd57;
+    margin-bottom: 20px;
+}
+
+/* Стили для окна анекдота */
+.joke-container {
+    background-color: #40444b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.joke-container h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #ffdd57;
+}
+
+/* Стиль для текста анекдота */
+#joke {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #e2e2e2;
+}
+
+/* Стили для кнопок */
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    background-color: #7289da;
+    color: #ffffff;
+    transition: background-color 0.3s, transform 0.1s ease-out;
+}
+
+.button-container button:hover {
+    background-color: #5a6eb9;
+}
+
+.button-container button:active {
+    transform: scale(0.95);
+}
+
+/* Стили для окна Топ 10 шуток */
+.top-jokes-container {
+    padding: 20px;
+    background-color: #40444b;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    color: #ffffff;
+}
+
+.top-jokes-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ffdd57;
+}
+
+.top-jokes-list {
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #ffffff;
+}
+
+.top-jokes-list li {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #5a5a5a;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.top-jokes-list li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Стили для раздела Сообщества */
+footer#community {
+    background-color: #23272a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.community-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-image {
+        height: 50vh;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .joke-container, .top-jokes-container {
+        width: 90%;
+    }
+
+    .button-container button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
